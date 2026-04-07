@@ -1,0 +1,43 @@
+{
+  "model_file": "model_credito.joblib",
+  "target_column": "Credito",
+  "feature_columns": [
+    "Edad",
+    "Tarjetas",
+    "Deuda",
+    "Saldo",
+    "CrediScore",
+    "A\u00f1os_empleo",
+    "Ingresos"
+  ],
+  "label_mapping": {
+    "0": "No",
+    "1": "Si"
+  },
+  "seed": 42,
+  "best_model_name": "logreg",
+  "baseline_metrics": {
+    "roc_auc": 0.9561229994605286,
+    "f1": 0.9007633587786259,
+    "recall": 0.8805970149253731,
+    "precision": 0.921875,
+    "accuracy": 0.9133333333333333
+  },
+  "final_metrics": {
+    "roc_auc": 0.9600791224599892,
+    "f1": 0.9323308270676691,
+    "recall": 0.9253731343283582,
+    "precision": 0.9393939393939394,
+    "accuracy": 0.94
+  },
+  "best_params": {
+    "classifier__solver": "lbfgs",
+    "classifier__class_weight": null,
+    "classifier__C": 29.763514416313193
+  },
+  "library_versions": {
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scikit_learn": "1.8.0"
+  }
+}
