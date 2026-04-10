@@ -1,0 +1,53 @@
+{
+  "model_name": "logistic_regression_ansiedad",
+  "created_at": "2026-04-10T13:29:09",
+  "features": [
+    "P_A1",
+    "P_A2",
+    "P_A3",
+    "P_A4",
+    "P_A5",
+    "P_A6"
+  ],
+  "target": "NIVEL_ANSIEDAD",
+  "random_state": 42,
+  "split_strategy": "GroupShuffleSplit por correo",
+  "cv_strategy": "StratifiedGroupKFold(5)",
+  "train_rows": 163,
+  "test_rows": 41,
+  "selection_strategy": "nested_params_mode",
+  "best_params": {
+    "model__C": 100.0,
+    "model__class_weight": null
+  },
+  "train_grid_best_params": {
+    "model__C": 100.0,
+    "model__class_weight": null
+  },
+  "cv_best_f1_macro": 0.9644871794871795,
+  "nested_cv_summary": {
+    "outer_strategy": "StratifiedGroupKFold(n_splits=5)",
+    "n_outer_folds": 5,
+    "accuracy_mean": 0.9901219512195123,
+    "accuracy_std": 0.0135277932334877,
+    "precision_macro_mean": 0.99,
+    "recall_macro_mean": 0.9666666666666666,
+    "f1_macro_mean": 0.9747368421052631,
+    "f1_macro_std": 0.03459300363190521
+  },
+  "test_metrics": {
+    "accuracy": 0.9512195121951219,
+    "precision_macro": 0.9666666666666667,
+    "recall_macro": 0.9444444444444444,
+    "f1_macro": 0.9508928571428572
+  },
+  "artifacts": {
+    "model": "c:\\GitHub\\Analitica-Negocios\\Semana_1_Proyecto_3\\rl_model_ansiedad.joblib"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "sklearn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  }
+}

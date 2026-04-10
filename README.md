@@ -1,18 +1,17 @@
-# Analitica de Negocios - Mini Proyectos de Credito y Salario
+# Analitica de Negocios - Proyectos Semanales
 
-Este repositorio aplica analitica de negocios para construir y desplegar dos soluciones de machine learning:
+Este repositorio reúne proyectos de analitica de negocios que evolucionan por semanas y pueden cubrir multiples areas de negocio, no necesariamente relacionadas entre si.
 
-- Un modelo de evaluacion crediticia (clasificacion).
-- Un modelo de estimacion salarial (regresion).
-
-La idea central es transformar datos en decisiones o estimaciones con un flujo reproducible de entrenamiento y una interfaz ligera para consumo.
+La idea central es transformar datos en decisiones o estimaciones con un flujo reproducible de entrenamiento y una interfaz ligera para consumo final. A medida que avancen las semanas, este README se ampliara para reflejar los nuevos casos de uso, modelos y aplicaciones.
 
 ## Objetivo de negocio
 
-Los objetivos son:
+Los objetivos generales son:
 
 - Ayudar a una entidad financiera a tomar decisiones preliminares de credito con mayor consistencia.
 - Estimar rangos salariales de forma orientativa para apoyar analisis de perfiles.
+- Ofrecer una evaluacion orientativa de estres y ansiedad a partir de cuestionarios breves.
+- Documentar y desplegar nuevos casos de analitica de negocios conforme se sumen proyectos semanales.
 
 ## Enfoque analitico
 
@@ -33,6 +32,13 @@ Los proyectos se estructuraron con buenas practicas de analitica predictiva:
 - [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb): notebook de entrenamiento, comparacion y guardado del modelo de salario.
 - [Semana_1_Proyecto_2/app_salario_streamlit.py](Semana_1_Proyecto_2/app_salario_streamlit.py): aplicacion Streamlit para estimar salario.
 - [Semana_1_Proyecto_2/modelo_salario_pipeline.joblib](Semana_1_Proyecto_2/modelo_salario_pipeline.joblib): artefacto de modelo de salario con pipeline y metadata basica.
+- [Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb](Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo de ansiedad.
+- [Semana_1_Proyecto_3/stress_SVM.ipynb](Semana_1_Proyecto_3/stress_SVM.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo de estres.
+- [Semana_1_Proyecto_3/app_salud_mental_streamlit.py](Semana_1_Proyecto_3/app_salud_mental_streamlit.py): aplicacion Streamlit unificada para evaluar estres y ansiedad.
+- [Semana_1_Proyecto_3/rl_model_ansiedad.joblib](Semana_1_Proyecto_3/rl_model_ansiedad.joblib): modelo de ansiedad listo para inferencia.
+- [Semana_1_Proyecto_3/svm_classifier_stress.joblib](Semana_1_Proyecto_3/svm_classifier_stress.joblib): modelo de estres listo para inferencia.
+- [Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json](Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json): metadata de despliegue del modelo de ansiedad.
+- [Semana_1_Proyecto_3/svm_classifier_stress_metadata.json](Semana_1_Proyecto_3/svm_classifier_stress_metadata.json): metadata de despliegue del modelo de estres.
 - [requirements.txt](requirements.txt): dependencias del entorno.
 
 ## Flujo de trabajo
@@ -43,10 +49,6 @@ Los proyectos se estructuraron con buenas practicas de analitica predictiva:
 4. Se selecciona el mejor modelo segun la metrica objetivo.
 5. Se guardan artefactos de inferencia.
 6. Las apps Streamlit consumen esos artefactos para mostrar resultados al usuario final.
-
-## Interpretacion de la solucion
-
-Desde una perspectiva de negocio, estas soluciones no buscan reemplazar una politica formal de riesgo o compensaciones. Su valor esta en estandarizar una primera evaluacion, reducir friccion operativa y ofrecer una base analitica repetible.
 
 ## Como ejecutar
 
@@ -86,16 +88,23 @@ python -m streamlit run Semana_1_Proyecto_1/app_credito_streamlit.py
 python -m streamlit run Semana_1_Proyecto_2/app_salario_streamlit.py
 ```
 
+```bash
+python -m streamlit run Semana_1_Proyecto_3/app_salud_mental_streamlit.py
+```
+
 ### 5. Abrir notebooks
 
 Si quieres revisar el entrenamiento, abre:
 
 - [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb)
 - [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb)
+- [Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb](Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb)
+- [Semana_1_Proyecto_3/stress_SVM.ipynb](Semana_1_Proyecto_3/stress_SVM.ipynb)
 
 ## Notas
 
 - Los montos en la interfaz estan expresados en soles.
 - El modelo de credito y su app se alinean por medio de metadata dedicada.
 - El modelo de salario se serializa como un artefacto unico con pipeline y metadata basica.
+- Los modelos de salud mental se consumen como artefactos .joblib y se presentan en una unica app Streamlit.
 - Las predicciones mostradas son orientativas y no sustituyen una evaluacion formal.

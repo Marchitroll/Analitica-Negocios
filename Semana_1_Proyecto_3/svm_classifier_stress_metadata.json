@@ -1,0 +1,57 @@
+{
+  "model_name": "svm_classifier_estres",
+  "created_at": "2026-04-10T13:30:59",
+  "features": [
+    "P_E1",
+    "P_E2",
+    "P_E3",
+    "P_E4",
+    "P_E5",
+    "P_E6"
+  ],
+  "target": "NIVEL_ESTRES",
+  "random_state": 42,
+  "split_strategy": "GroupShuffleSplit por correo",
+  "cv_strategy": "StratifiedGroupKFold(5)",
+  "train_rows": 163,
+  "test_rows": 41,
+  "selection_strategy": "nested_params_mode",
+  "best_params": {
+    "model__C": 10.0,
+    "model__class_weight": null,
+    "model__gamma": "scale",
+    "model__kernel": "linear"
+  },
+  "train_grid_best_params": {
+    "model__C": 10.0,
+    "model__class_weight": null,
+    "model__gamma": "scale",
+    "model__kernel": "linear"
+  },
+  "cv_best_f1_macro": 0.9878260869565217,
+  "nested_cv_summary": {
+    "outer_strategy": "StratifiedGroupKFold(n_splits=5)",
+    "n_outer_folds": 5,
+    "accuracy_mean": 0.9852439024390243,
+    "accuracy_std": 0.013472712413391166,
+    "precision_macro_mean": 0.9625,
+    "recall_macro_mean": 0.9914285714285714,
+    "f1_macro_mean": 0.9741554741554742,
+    "f1_macro_std": 0.02362136884925542
+  },
+  "test_metrics": {
+    "accuracy": 0.926829268292683,
+    "precision_macro": 0.8201754385964912,
+    "recall_macro": 0.8903508771929824,
+    "f1_macro": 0.8043543543543543
+  },
+  "artifacts": {
+    "model": "c:\\GitHub\\Analitica-Negocios\\Semana_1_Proyecto_3\\svm_classifier_stress.joblib"
+  },
+  "environment": {
+    "python": "3.14.4",
+    "sklearn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  }
+}
