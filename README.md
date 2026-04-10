@@ -1,41 +1,52 @@
-# Analitica de Negocios - Mini Proyecto de Credito
+# Analitica de Negocios - Mini Proyectos de Credito y Salario
 
-Este mini proyecto aplica analitica de negocios para construir y desplegar un modelo simple de evaluacion crediticia. La idea central es transformar datos de clientes en una decision de aprobacion o rechazo, apoyada por un flujo reproducible de entrenamiento y una interfaz ligera para consumo.
+Este repositorio aplica analitica de negocios para construir y desplegar dos soluciones de machine learning:
+
+- Un modelo de evaluacion crediticia (clasificacion).
+- Un modelo de estimacion salarial (regresion).
+
+La idea central es transformar datos en decisiones o estimaciones con un flujo reproducible de entrenamiento y una interfaz ligera para consumo.
 
 ## Objetivo de negocio
 
-El objetivo es ayudar a una entidad financiera a tomar decisiones preliminares de credito con mayor consistencia. En lugar de evaluar casos manualmente uno por uno, el proyecto utiliza un modelo de clasificacion que estima la probabilidad de aprobacion y devuelve una decision interpretable para el usuario.
+Los objetivos son:
+
+- Ayudar a una entidad financiera a tomar decisiones preliminares de credito con mayor consistencia.
+- Estimar rangos salariales de forma orientativa para apoyar analisis de perfiles.
 
 ## Enfoque analitico
 
-El proyecto se estructuro con buenas practicas de analitica predictiva:
+Los proyectos se estructuraron con buenas practicas de analitica predictiva:
 
 - Separacion clara entre entrenamiento y despliegue.
 - Preprocesamiento dentro de un pipeline para evitar fuga de informacion.
-- Validacion con particion estratificada y metricas orientadas a clasificacion.
-- Seleccion del mejor modelo usando ROC-AUC como criterio principal.
-- Persistencia del modelo y de su metadata para asegurar consistencia entre entrenamiento e inferencia.
+- Validacion con metricas alineadas al tipo de problema (clasificacion o regresion).
+- Seleccion del mejor modelo con criterio objetivo por validacion cruzada.
+- Persistencia de artefactos para asegurar consistencia entre entrenamiento e inferencia.
 
 ## Componentes del proyecto
 
-- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo.
-- [Semana_1_Proyecto_1/app_credito_streamlit.py](Semana_1_Proyecto_1/app_credito_streamlit.py): aplicacion Streamlit para capturar datos y generar una prediccion.
-- [Semana_1_Proyecto_1/model_credito.joblib](Semana_1_Proyecto_1/model_credito.joblib): modelo entrenado listo para inferencia.
-- [Semana_1_Proyecto_1/model_credito_metadata.json](Semana_1_Proyecto_1/model_credito_metadata.json): contrato de despliegue con columnas, etiquetas y versiones.
+- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo de credito.
+- [Semana_1_Proyecto_1/app_credito_streamlit.py](Semana_1_Proyecto_1/app_credito_streamlit.py): aplicacion Streamlit para evaluar aprobacion de credito.
+- [Semana_1_Proyecto_1/model_credito.joblib](Semana_1_Proyecto_1/model_credito.joblib): modelo de credito entrenado listo para inferencia.
+- [Semana_1_Proyecto_1/model_credito_metadata.json](Semana_1_Proyecto_1/model_credito_metadata.json): metadata de despliegue del modelo de credito.
+- [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb): notebook de entrenamiento, comparacion y guardado del modelo de salario.
+- [Semana_1_Proyecto_2/app_salario_streamlit.py](Semana_1_Proyecto_2/app_salario_streamlit.py): aplicacion Streamlit para estimar salario.
+- [Semana_1_Proyecto_2/modelo_salario_pipeline.joblib](Semana_1_Proyecto_2/modelo_salario_pipeline.joblib): artefacto de modelo de salario con pipeline y metadata basica.
 - [requirements.txt](requirements.txt): dependencias del entorno.
 
 ## Flujo de trabajo
 
-1. Se carga y prepara la data de credito.
-2. Se entrena un pipeline con preprocesamiento y clasificador.
+1. Se carga y prepara la data para cada caso de uso.
+2. Se entrena un pipeline con preprocesamiento y modelo.
 3. Se compara rendimiento con validacion cruzada.
-4. Se selecciona el mejor modelo segun ROC-AUC.
-5. Se guarda el modelo y su metadata.
-6. La app Streamlit consume esos artefactos para mostrar una decision al usuario final.
+4. Se selecciona el mejor modelo segun la metrica objetivo.
+5. Se guardan artefactos de inferencia.
+6. Las apps Streamlit consumen esos artefactos para mostrar resultados al usuario final.
 
 ## Interpretacion de la solucion
 
-Desde una perspectiva de negocio, este proyecto no busca reemplazar una politica crediticia formal. Su valor esta en estandarizar una primera decision, reducir friccion operativa y ofrecer una base analitica repetible para discutir riesgo, aprobacion y segmentacion de clientes.
+Desde una perspectiva de negocio, estas soluciones no buscan reemplazar una politica formal de riesgo o compensaciones. Su valor esta en estandarizar una primera evaluacion, reducir friccion operativa y ofrecer una base analitica repetible.
 
 ## Como ejecutar
 
@@ -63,20 +74,28 @@ Con el entorno activo, instalar los paquetes del proyecto:
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar la aplicacion
+### 4. Ejecutar las aplicaciones
 
-Con el entorno virtual del proyecto activo, iniciar la aplicacion con:
+Con el entorno virtual activo, puedes ejecutar:
 
 ```bash
 python -m streamlit run Semana_1_Proyecto_1/app_credito_streamlit.py
 ```
 
-### 5. Abrir el notebook
+```bash
+python -m streamlit run Semana_1_Proyecto_2/app_salario_streamlit.py
+```
 
-Si quieres revisar el entrenamiento, abre [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb) en Jupyter con el mismo entorno activo.
+### 5. Abrir notebooks
+
+Si quieres revisar el entrenamiento, abre:
+
+- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb)
+- [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb)
 
 ## Notas
 
 - Los montos en la interfaz estan expresados en soles.
-- El modelo y la app fueron ajustados para mantenerse alineados mediante metadata.
-- La prediccion mostrada es orientativa y no sustituye una evaluacion crediticia formal.
+- El modelo de credito y su app se alinean por medio de metadata dedicada.
+- El modelo de salario se serializa como un artefacto unico con pipeline y metadata basica.
+- Las predicciones mostradas son orientativas y no sustituyen una evaluacion formal.
