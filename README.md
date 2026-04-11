@@ -1,68 +1,73 @@
 # Analitica de Negocios - Proyectos Semanales
 
-Este repositorio reúne proyectos de analitica de negocios que evolucionan por semanas y pueden cubrir multiples areas de negocio, no necesariamente relacionadas entre si.
+Repositorio de proyectos de analitica aplicada por semanas. Cada proyecto sigue un flujo reproducible de entrenamiento, guardado de artefactos y consumo desde aplicaciones Streamlit.
 
-La idea central es transformar datos en decisiones o estimaciones con un flujo reproducible de entrenamiento y una interfaz ligera para consumo final. A medida que avancen las semanas, este README se ampliara para reflejar los nuevos casos de uso, modelos y aplicaciones.
+## Distribucion actual de la raiz
+
+- [README.md](README.md)
+- [requirements.txt](requirements.txt)
+- [Semana_1_Proyecto_1](Semana_1_Proyecto_1)
+- [Semana_1_Proyecto_2](Semana_1_Proyecto_2)
+- [Semana_1_Proyecto_3](Semana_1_Proyecto_3)
+- [Semana_1_Proyecto_4](Semana_1_Proyecto_4)
 
 ## Objetivo de negocio
 
-Los objetivos generales son:
+- Estandarizar decisiones preliminares de credito.
+- Estimar salarios de forma orientativa para perfiles laborales.
+- Ofrecer evaluaciones orientativas de estres y ansiedad.
+- Incorporar un canal FAQ conversacional para atencion al publico.
 
-- Ayudar a una entidad financiera a tomar decisiones preliminares de credito con mayor consistencia.
-- Estimar rangos salariales de forma orientativa para apoyar analisis de perfiles.
-- Ofrecer una evaluacion orientativa de estres y ansiedad a partir de cuestionarios breves.
-- Documentar y desplegar nuevos casos de analitica de negocios conforme se sumen proyectos semanales.
+## Proyectos disponibles
 
-## Enfoque analitico
+### Semana 1 - Proyecto 1: Credito
 
-Los proyectos se estructuraron con buenas practicas de analitica predictiva:
+- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb)
+- [Semana_1_Proyecto_1/app_credito_streamlit.py](Semana_1_Proyecto_1/app_credito_streamlit.py)
+- [Semana_1_Proyecto_1/model_credito.joblib](Semana_1_Proyecto_1/model_credito.joblib)
+- [Semana_1_Proyecto_1/model_credito_metadata.json](Semana_1_Proyecto_1/model_credito_metadata.json)
 
-- Separacion clara entre entrenamiento y despliegue.
-- Preprocesamiento dentro de un pipeline para evitar fuga de informacion.
-- Validacion con metricas alineadas al tipo de problema (clasificacion o regresion).
-- Seleccion del mejor modelo con criterio objetivo por validacion cruzada.
-- Persistencia de artefactos para asegurar consistencia entre entrenamiento e inferencia.
+### Semana 1 - Proyecto 2: Prediccion Salarial
 
-## Componentes del proyecto
+- [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb)
+- [Semana_1_Proyecto_2/app_salario_streamlit.py](Semana_1_Proyecto_2/app_salario_streamlit.py)
+- [Semana_1_Proyecto_2/modelo_salario_pipeline.joblib](Semana_1_Proyecto_2/modelo_salario_pipeline.joblib)
 
-- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo de credito.
-- [Semana_1_Proyecto_1/app_credito_streamlit.py](Semana_1_Proyecto_1/app_credito_streamlit.py): aplicacion Streamlit para evaluar aprobacion de credito.
-- [Semana_1_Proyecto_1/model_credito.joblib](Semana_1_Proyecto_1/model_credito.joblib): modelo de credito entrenado listo para inferencia.
-- [Semana_1_Proyecto_1/model_credito_metadata.json](Semana_1_Proyecto_1/model_credito_metadata.json): metadata de despliegue del modelo de credito.
-- [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb): notebook de entrenamiento, comparacion y guardado del modelo de salario.
-- [Semana_1_Proyecto_2/app_salario_streamlit.py](Semana_1_Proyecto_2/app_salario_streamlit.py): aplicacion Streamlit para estimar salario.
-- [Semana_1_Proyecto_2/modelo_salario_pipeline.joblib](Semana_1_Proyecto_2/modelo_salario_pipeline.joblib): artefacto de modelo de salario con pipeline y metadata basica.
-- [Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb](Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo de ansiedad.
-- [Semana_1_Proyecto_3/stress_SVM.ipynb](Semana_1_Proyecto_3/stress_SVM.ipynb): notebook de entrenamiento, evaluacion y guardado del modelo de estres.
-- [Semana_1_Proyecto_3/app_salud_mental_streamlit.py](Semana_1_Proyecto_3/app_salud_mental_streamlit.py): aplicacion Streamlit unificada para evaluar estres y ansiedad.
-- [Semana_1_Proyecto_3/rl_model_ansiedad.joblib](Semana_1_Proyecto_3/rl_model_ansiedad.joblib): modelo de ansiedad listo para inferencia.
-- [Semana_1_Proyecto_3/svm_classifier_stress.joblib](Semana_1_Proyecto_3/svm_classifier_stress.joblib): modelo de estres listo para inferencia.
-- [Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json](Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json): metadata de despliegue del modelo de ansiedad.
-- [Semana_1_Proyecto_3/svm_classifier_stress_metadata.json](Semana_1_Proyecto_3/svm_classifier_stress_metadata.json): metadata de despliegue del modelo de estres.
-- [requirements.txt](requirements.txt): dependencias del entorno.
+### Semana 1 - Proyecto 3: Salud Mental
 
-## Flujo de trabajo
+- [Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb](Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb)
+- [Semana_1_Proyecto_3/stress_SVM.ipynb](Semana_1_Proyecto_3/stress_SVM.ipynb)
+- [Semana_1_Proyecto_3/app_salud_mental_streamlit.py](Semana_1_Proyecto_3/app_salud_mental_streamlit.py)
+- [Semana_1_Proyecto_3/rl_model_ansiedad.joblib](Semana_1_Proyecto_3/rl_model_ansiedad.joblib)
+- [Semana_1_Proyecto_3/svm_classifier_stress.joblib](Semana_1_Proyecto_3/svm_classifier_stress.joblib)
+- [Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json](Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json)
+- [Semana_1_Proyecto_3/svm_classifier_stress_metadata.json](Semana_1_Proyecto_3/svm_classifier_stress_metadata.json)
 
-1. Se carga y prepara la data para cada caso de uso.
-2. Se entrena un pipeline con preprocesamiento y modelo.
-3. Se compara rendimiento con validacion cruzada.
-4. Se selecciona el mejor modelo segun la metrica objetivo.
-5. Se guardan artefactos de inferencia.
-6. Las apps Streamlit consumen esos artefactos para mostrar resultados al usuario final.
+### Semana 1 - Proyecto 4: Chatbot FAQ Semantico
+
+- [Semana_1_Proyecto_4/creación_chatbot.ipynb](Semana_1_Proyecto_4/creación_chatbot.ipynb): entrenamiento y validacion.
+- [Semana_1_Proyecto_4/chatbot_utils.py](Semana_1_Proyecto_4/chatbot_utils.py): utilidades de carga, entrenamiento, prediccion y persistencia.
+- [Semana_1_Proyecto_4/chatbot_faq.json](Semana_1_Proyecto_4/chatbot_faq.json): base FAQ editable.
+- [Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib](Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib): artefacto de inferencia.
+- [Semana_1_Proyecto_4/chatbot_tfidf_metadata.json](Semana_1_Proyecto_4/chatbot_tfidf_metadata.json): metadata del artefacto.
+- [Semana_1_Proyecto_4/app_chatbot_streamlit.py](Semana_1_Proyecto_4/app_chatbot_streamlit.py): interfaz conversacional.
+
+## Flujo de trabajo comun
+
+1. Preparar datos de entrada para el caso de uso.
+2. Entrenar modelo o pipeline en notebook.
+3. Validar resultados y guardar artefactos.
+4. Consumir artefactos desde app Streamlit.
 
 ## Como ejecutar
 
-### 1. Crear el entorno virtual
-
-Desde la raiz del repositorio, crear el entorno si aun no existe:
+### 1. Crear entorno virtual
 
 ```powershell
 python -m venv .venv
 ```
 
-### 2. Activar el entorno
-
-En Windows PowerShell:
+### 2. Activar entorno en PowerShell
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -70,41 +75,27 @@ En Windows PowerShell:
 
 ### 3. Instalar dependencias
 
-Con el entorno activo, instalar los paquetes del proyecto:
-
 ```powershell
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar las aplicaciones
+### 4. Ejecutar apps Streamlit
 
-Con el entorno virtual activo, puedes ejecutar:
-
-```bash
+```powershell
 python -m streamlit run Semana_1_Proyecto_1/app_credito_streamlit.py
-```
-
-```bash
 python -m streamlit run Semana_1_Proyecto_2/app_salario_streamlit.py
-```
-
-```bash
 python -m streamlit run Semana_1_Proyecto_3/app_salud_mental_streamlit.py
+python -m streamlit run Semana_1_Proyecto_4/app_chatbot_streamlit.py
 ```
 
-### 5. Abrir notebooks
+### 5. Entrenar y regenerar artefactos del Proyecto 4
 
-Si quieres revisar el entrenamiento, abre:
-
-- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb)
-- [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb)
-- [Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb](Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb)
-- [Semana_1_Proyecto_3/stress_SVM.ipynb](Semana_1_Proyecto_3/stress_SVM.ipynb)
+1. Ejecutar [Semana_1_Proyecto_4/creación_chatbot.ipynb](Semana_1_Proyecto_4/creación_chatbot.ipynb).
+2. Verificar que se actualicen [Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib](Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib) y [Semana_1_Proyecto_4/chatbot_tfidf_metadata.json](Semana_1_Proyecto_4/chatbot_tfidf_metadata.json).
+3. Levantar [Semana_1_Proyecto_4/app_chatbot_streamlit.py](Semana_1_Proyecto_4/app_chatbot_streamlit.py).
 
 ## Notas
 
-- Los montos en la interfaz estan expresados en soles.
-- El modelo de credito y su app se alinean por medio de metadata dedicada.
-- El modelo de salario se serializa como un artefacto unico con pipeline y metadata basica.
-- Los modelos de salud mental se consumen como artefactos .joblib y se presentan en una unica app Streamlit.
-- Las predicciones mostradas son orientativas y no sustituyen una evaluacion formal.
+- Las predicciones son orientativas y no sustituyen evaluaciones formales.
+- En Proyecto 4, el comportamiento de fallback se activa cuando el score de similitud es menor al threshold configurado.
+- La app del Proyecto 4 consume artefactos serializados y metadata generada por notebook.

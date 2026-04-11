@@ -28,3 +28,12 @@ Thumbs.db
 
 # Logs
 *.log
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Archivos locales de analisis y pruebas UX/UI
+uxui_*.png
+lighthouse-*.html
+lighthouse-*.json

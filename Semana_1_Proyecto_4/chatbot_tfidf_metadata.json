@@ -1,0 +1,20 @@
+{
+  "artifact_file": "chatbot_tfidf_artifacts.joblib",
+  "faq_file": "chatbot_faq.json",
+  "threshold": 0.3,
+  "faq_entries": 6,
+  "training_questions": 30,
+  "vectorizer": {
+    "class": "TfidfVectorizer",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "vocabulary_size": 87
+  },
+  "library_versions": {
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "created_at_utc": "2026-04-11T03:45:45.096958+00:00"
+}

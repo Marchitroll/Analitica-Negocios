@@ -1,0 +1,74 @@
+[
+  {
+    "id": "horario_atencion",
+    "category": "atencion",
+    "answer": "Nuestro horario de atencion es de lunes a viernes, de 9:00 AM a 6:00 PM.",
+    "questions": [
+      "Cual es el horario de atencion",
+      "A que hora atienden",
+      "A que hora abren",
+      "Cual es su horario",
+      "En que horario puedo comprar"
+    ]
+  },
+  {
+    "id": "ubicacion_tienda",
+    "category": "ubicacion",
+    "answer": "Nuestra tienda esta ubicada en Calle Ficticia 123, Ciudad Ficticia.",
+    "questions": [
+      "Donde esta ubicada la tienda",
+      "Donde quedan",
+      "Cual es la direccion de la tienda",
+      "Como llego a la tienda",
+      "Donde los encuentro"
+    ]
+  },
+  {
+    "id": "metodos_pago",
+    "category": "pagos",
+    "answer": "Aceptamos pagos con tarjeta de credito, debito, PayPal y transferencia bancaria.",
+    "questions": [
+      "Cuales son los metodos de pago disponibles",
+      "Aceptan tarjeta",
+      "Puedo pagar con paypal",
+      "Formas de pago",
+      "Se puede pagar por transferencia"
+    ]
+  },
+  {
+    "id": "envios_nacionales",
+    "category": "envios",
+    "answer": "Si, realizamos envios a todo el pais.",
+    "questions": [
+      "Tienen envios a todo el pais",
+      "Hacen envios nacionales",
+      "Envian a provincia",
+      "Pueden enviar mi pedido",
+      "Cobertura de envios"
+    ]
+  },
+  {
+    "id": "productos_stock",
+    "category": "catalogo",
+    "answer": "Tenemos una amplia variedad de productos, consulta nuestro catalogo online para ver stock actualizado.",
+    "questions": [
+      "Que productos tienen en stock",
+      "Tienen disponibilidad",
+      "Que productos venden",
+      "Donde veo el catalogo",
+      "Que hay disponible"
+    ]
+  },
+  {
+    "id": "devoluciones",
+    "category": "postventa",
+    "answer": "Para hacer una devolucion, contactanos dentro de los 30 dias posteriores a la compra.",
+    "questions": [
+      "Como puedo hacer una devolucion",
+      "Quiero devolver un producto",
+      "Cual es la politica de devolucion",
+      "Hasta cuando puedo devolver",
+      "Proceso de devolucion"
+    ]
+  }
+]
