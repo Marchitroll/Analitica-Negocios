@@ -1,6 +1,6 @@
 {
   "model_name": "logistic_regression_ansiedad",
-  "created_at": "2026-04-10T13:29:09",
+  "created_at": "2026-04-16T18:31:48",
   "features": [
     "P_A1",
     "P_A2",

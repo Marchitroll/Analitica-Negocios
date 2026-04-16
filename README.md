@@ -2,6 +2,8 @@
 
 Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue un flujo reproducible de entrenamiento, guardado de artefactos y consumo desde aplicaciones Streamlit.
 
+**Versión de Python:** 3.14.4
+
 ## Distribución actual de la raíz
 
 - [README.md](README.md)
@@ -108,6 +110,32 @@ python -m streamlit run Semana_1_Proyecto_4/app_chatbot_streamlit.py
 1. Abrir [Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb](Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb).
 2. Ejecutar las celdas en orden para reproducir EDA, pruebas de hipótesis, segmentación y tablero gerencial.
 3. Validar decisiones finales de promociones y bono con base en los p-values reportados.
+
+## Troubleshooting en Windows
+
+### Error: DLL load failed (ImportError)
+
+Si ves un error como `ImportError: DLL load failed while importing algos: Una directiva de Control de aplicaciones bloqueó este archivo`, ejecuta:
+
+```powershell
+Get-ChildItem -Path ".venv" -Recurse -File | Unblock-File
+```
+
+Esto desbloquea los archivos DLL en el entorno virtual.
+
+### Error: Script execution blocked en PowerShell
+
+Si PowerShell bloquea la ejecución de `Activate.ps1`, establece la política de ejecución:
+
+```powershell
+Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned
+```
+
+Luego intenta activar nuevamente:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
 
 ## Notas
 
