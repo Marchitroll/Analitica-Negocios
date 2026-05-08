@@ -13,6 +13,7 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - [Semana_1_Proyecto_3](Semana_1_Proyecto_3)
 - [Semana_1_Proyecto_4](Semana_1_Proyecto_4)
 - [Semana_2_Proyecto_5](Semana_2_Proyecto_5)
+- [Semana_5_Proyecto_6](Semana_5_Proyecto_6)
 
 ## Objetivo de negocio
 
@@ -21,6 +22,7 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - Ofrecer evaluaciones orientativas de estrés y ansiedad.
 - Incorporar un canal FAQ conversacional para atención al público.
 - Transformar datos transaccionales en decisiones comerciales con evidencia estadística.
+- Explorar, limpiar y preparar datos censales para modelado predictivo de ingresos.
 
 ## Proyectos disponibles
 
@@ -62,9 +64,13 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - [Semana_2_Proyecto_5/Caso_Data_Driven.ipynb](Semana_2_Proyecto_5/Caso_Data_Driven.ipynb): versión base y de referencia del caso.
 - [Semana_2_Proyecto_5/ventas_data_driven.csv](Semana_2_Proyecto_5/ventas_data_driven.csv): dataset transaccional del mini proyecto.
 
-## Flujo de trabajo común
+### Semana 5 - Proyecto 6: EDA Census Dataset
 
-1. Preparar datos de entrada para el caso de uso.
+- [Semana_5_Proyecto_6/EDA.ipynb](Semana_5_Proyecto_6/EDA.ipynb): EDA completo con limpieza, imputación (comparación Mediana vs KNN), visualización y exportación.
+- [Semana_5_Proyecto_6/Census.csv](Semana_5_Proyecto_6/Census.csv): dataset original Census Income (32,561 registros, 12 variables).
+- [Semana_5_Proyecto_6/Census_limpio.csv](Semana_5_Proyecto_6/Census_limpio.csv): dataset limpio exportado listo para modelado.
+
+## Flujo de trabajo común
 2. Entrenar modelo o pipeline en notebook.
 3. Validar resultados y guardar artefactos.
 4. Consumir artefactos desde app Streamlit.
@@ -110,6 +116,16 @@ python -m streamlit run Semana_1_Proyecto_4/app_chatbot_streamlit.py
 1. Abrir [Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb](Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb).
 2. Ejecutar las celdas en orden para reproducir EDA, pruebas de hipótesis, segmentación y tablero gerencial.
 3. Validar decisiones finales de promociones y bono con base en los p-values reportados.
+
+### 7. Ejecutar el EDA del Proyecto 6 (Census Dataset)
+
+1. Activar el entorno base de Anaconda:
+   ```powershell
+   conda activate base
+   ```
+2. Abrir [Semana_5_Proyecto_6/EDA.ipynb](Semana_5_Proyecto_6/EDA.ipynb) con Jupyter Notebook.
+3. Ejecutar las celdas en orden para reproducir el EDA, limpieza, imputación y exportación del dataset.
+4. El dataset limpio se genera como `Census_limpio.csv` en la misma carpeta.
 
 ## Troubleshooting en Windows
 
