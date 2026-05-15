@@ -10,3 +10,5 @@ jupyter
 ipykernel
 streamlit
 pandas
+prince
+plotly

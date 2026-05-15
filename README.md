@@ -2,7 +2,7 @@
 
 Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue un flujo reproducible de entrenamiento, guardado de artefactos y consumo desde aplicaciones Streamlit.
 
-**Versión de Python:** 3.14.4
+**Versión de Python:** 3.13.9
 
 ## Distribución actual de la raíz
 
@@ -14,6 +14,7 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - [Semana_1_Proyecto_4](Semana_1_Proyecto_4)
 - [Semana_2_Proyecto_5](Semana_2_Proyecto_5)
 - [Semana_5_Proyecto_6](Semana_5_Proyecto_6)
+- [Semana_6_Proyecto_7](Semana_6_Proyecto_7)
 
 ## Objetivo de negocio
 
@@ -23,6 +24,7 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - Incorporar un canal FAQ conversacional para atención al público.
 - Transformar datos transaccionales en decisiones comerciales con evidencia estadística.
 - Explorar, limpiar y preparar datos censales para modelado predictivo de ingresos.
+- Analizar asociaciones entre marcas y atributos mediante análisis de correspondencia.
 
 ## Proyectos disponibles
 
@@ -70,11 +72,17 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - [Semana_5_Proyecto_6/Census.csv](Semana_5_Proyecto_6/Census.csv): dataset original Census Income (32,561 registros, 12 variables).
 - [Semana_5_Proyecto_6/Census_limpio.csv](Semana_5_Proyecto_6/Census_limpio.csv): dataset limpio exportado listo para modelado.
 
+### Semana 6 - Proyecto 7: Análisis de Correspondencia
+
+- [Semana_6_Proyecto_7/Análisis_de_correspondencia.ipynb](Semana_6_Proyecto_7/Análisis_de_correspondencia.ipynb): análisis de correspondencia (caso detergentes) con perfiles fila/columna, prueba chi-cuadrado, V de Cramer, tabla de inercia, contribuciones (CTR), mapa perceptual 2D con elipses de asociación, visualización 3D interactiva e implicaciones de negocio.
+
 ## Flujo de trabajo común
-2. Entrenar modelo o pipeline en notebook.
-3. Validar resultados y guardar artefactos.
-4. Consumir artefactos desde app Streamlit.
-5. Para casos data driven, ejecutar análisis inferencial y segmentación para respaldar decisiones de negocio.
+
+1. Entrenar modelo o pipeline en notebook.
+2. Validar resultados y guardar artefactos.
+3. Consumir artefactos desde app Streamlit.
+4. Para casos data driven, ejecutar análisis inferencial y segmentación para respaldar decisiones de negocio.
+5. Documentar el flujo para facilitar reproducibilidad y mantenimiento.
 
 ## Cómo ejecutar
 
@@ -120,9 +128,11 @@ python -m streamlit run Semana_1_Proyecto_4/app_chatbot_streamlit.py
 ### 7. Ejecutar el EDA del Proyecto 6 (Census Dataset)
 
 1. Activar el entorno base de Anaconda:
+
    ```powershell
    conda activate base
    ```
+
 2. Abrir [Semana_5_Proyecto_6/EDA.ipynb](Semana_5_Proyecto_6/EDA.ipynb) con Jupyter Notebook.
 3. Ejecutar las celdas en orden para reproducir el EDA, limpieza, imputación y exportación del dataset.
 4. El dataset limpio se genera como `Census_limpio.csv` en la misma carpeta.
@@ -150,7 +160,7 @@ Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned
 Luego intenta activar nuevamente:
 
 ```powershell
-.\venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate.ps1
 ```
 
 ## Notas
