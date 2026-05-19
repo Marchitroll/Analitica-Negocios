@@ -15,6 +15,7 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 - [Semana_2_Proyecto_5](Semana_2_Proyecto_5)
 - [Semana_5_Proyecto_6](Semana_5_Proyecto_6)
 - [Semana_6_Proyecto_7](Semana_6_Proyecto_7)
+- [Semana_7_Proyecto_8](Semana_7_Proyecto_8)
 
 ## Objetivo de negocio
 
@@ -75,6 +76,11 @@ Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue
 ### Semana 6 - Proyecto 7: Análisis de Correspondencia
 
 - [Semana_6_Proyecto_7/Análisis_de_correspondencia.ipynb](Semana_6_Proyecto_7/Análisis_de_correspondencia.ipynb): análisis de correspondencia (caso detergentes) con perfiles fila/columna, prueba chi-cuadrado, V de Cramer, tabla de inercia, contribuciones (CTR), mapa perceptual 2D con elipses de asociación, visualización 3D interactiva e implicaciones de negocio.
+
+### Semana 7 - Proyecto 8: Modelos de Predicción de Crédito
+
+- [Semana_7_Proyecto_8/Modelos_data_credito.ipynb](Semana_7_Proyecto_8/Modelos_data_credito.ipynb): comparación de árboles y ensambles con pipeline reproducible, preprocesamiento encapsulado, validación cruzada, ROC, matriz de confusión e importancia de variables.
+- [Semana_7_Proyecto_8/Credito.xlsx](Semana_7_Proyecto_8/Credito.xlsx): fuente de datos utilizada por el notebook.
 
 ## Flujo de trabajo común
 
