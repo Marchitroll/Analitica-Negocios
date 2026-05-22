@@ -1,177 +1,51 @@
-# Analítica de Negocios - Proyectos Semanales
+# 🧠 Analítica de Negocios - Proyectos
 
-Repositorio de proyectos de analítica aplicada por semanas. Cada proyecto sigue un flujo reproducible de entrenamiento, guardado de artefactos y consumo desde aplicaciones Streamlit.
+Repositorio de proyectos de analítica aplicada y Machine Learning organizada por semanas. Cada proyecto sigue un flujo reproducible de exploración, modelado, validación de no fuga de datos (*data leakage*), serialización de artefactos y consumo desde aplicaciones Streamlit.
 
-**Versión de Python:** 3.13.9
 
-## Distribución actual de la raíz
+> **Entorno de ejecución principal:** Python `3.13.9` administrado mediante el entorno Conda `base` o entorno virtual `.venv` compatible. Las librerías de modelado y visualización se detallan en el archivo [requirements.txt](requirements.txt).
+---
 
-- [README.md](README.md)
-- [requirements.txt](requirements.txt)
-- [Semana_1_Proyecto_1](Semana_1_Proyecto_1)
-- [Semana_1_Proyecto_2](Semana_1_Proyecto_2)
-- [Semana_1_Proyecto_3](Semana_1_Proyecto_3)
-- [Semana_1_Proyecto_4](Semana_1_Proyecto_4)
-- [Semana_2_Proyecto_5](Semana_2_Proyecto_5)
-- [Semana_5_Proyecto_6](Semana_5_Proyecto_6)
-- [Semana_6_Proyecto_7](Semana_6_Proyecto_7)
-- [Semana_7_Proyecto_8](Semana_7_Proyecto_8)
+## 🛠️ Instrucciones de Ejecución
 
-## Objetivo de negocio
+### 1. Preparación del Entorno
 
-- Estandarizar decisiones preliminares de crédito.
-- Estimar salarios de forma orientativa para perfiles laborales.
-- Ofrecer evaluaciones orientativas de estrés y ansiedad.
-- Incorporar un canal FAQ conversacional para atención al público.
-- Transformar datos transaccionales en decisiones comerciales con evidencia estadística.
-- Explorar, limpiar y preparar datos censales para modelado predictivo de ingresos.
-- Analizar asociaciones entre marcas y atributos mediante análisis de correspondencia.
+Puedes utilizar un entorno virtual estándar de Python o el entorno Conda `base` recomendado.
 
-## Proyectos disponibles
-
-### Semana 1 - Proyecto 1: Crédito
-
-- [Semana_1_Proyecto_1/Credito.ipynb](Semana_1_Proyecto_1/Credito.ipynb)
-- [Semana_1_Proyecto_1/app_credito_streamlit.py](Semana_1_Proyecto_1/app_credito_streamlit.py)
-- [Semana_1_Proyecto_1/model_credito.joblib](Semana_1_Proyecto_1/model_credito.joblib)
-- [Semana_1_Proyecto_1/model_credito_metadata.json](Semana_1_Proyecto_1/model_credito_metadata.json)
-
-### Semana 1 - Proyecto 2: Predicción Salarial
-
-- [Semana_1_Proyecto_2/SalarioPredicción.ipynb](Semana_1_Proyecto_2/SalarioPredicción.ipynb)
-- [Semana_1_Proyecto_2/app_salario_streamlit.py](Semana_1_Proyecto_2/app_salario_streamlit.py)
-- [Semana_1_Proyecto_2/modelo_salario_pipeline.joblib](Semana_1_Proyecto_2/modelo_salario_pipeline.joblib)
-
-### Semana 1 - Proyecto 3: Salud Mental
-
-- [Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb](Semana_1_Proyecto_3/ansiedad_regresion_logistica.ipynb)
-- [Semana_1_Proyecto_3/stress_SVM.ipynb](Semana_1_Proyecto_3/stress_SVM.ipynb)
-- [Semana_1_Proyecto_3/app_salud_mental_streamlit.py](Semana_1_Proyecto_3/app_salud_mental_streamlit.py)
-- [Semana_1_Proyecto_3/rl_model_ansiedad.joblib](Semana_1_Proyecto_3/rl_model_ansiedad.joblib)
-- [Semana_1_Proyecto_3/svm_classifier_stress.joblib](Semana_1_Proyecto_3/svm_classifier_stress.joblib)
-- [Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json](Semana_1_Proyecto_3/rl_model_ansiedad_metadata.json)
-- [Semana_1_Proyecto_3/svm_classifier_stress_metadata.json](Semana_1_Proyecto_3/svm_classifier_stress_metadata.json)
-
-### Semana 1 - Proyecto 4: Chatbot FAQ Semántico
-
-- [Semana_1_Proyecto_4/creación_chatbot.ipynb](Semana_1_Proyecto_4/creación_chatbot.ipynb): entrenamiento y validación.
-- [Semana_1_Proyecto_4/chatbot_utils.py](Semana_1_Proyecto_4/chatbot_utils.py): utilidades de carga, entrenamiento, predicción y persistencia.
-- [Semana_1_Proyecto_4/chatbot_faq.json](Semana_1_Proyecto_4/chatbot_faq.json): base FAQ editable.
-- [Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib](Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib): artefacto de inferencia.
-- [Semana_1_Proyecto_4/chatbot_tfidf_metadata.json](Semana_1_Proyecto_4/chatbot_tfidf_metadata.json): metadatos del artefacto.
-- [Semana_1_Proyecto_4/app_chatbot_streamlit.py](Semana_1_Proyecto_4/app_chatbot_streamlit.py): interfaz conversacional.
-
-### Semana 2 - Proyecto 5: Estrategia de Ventas Data-Driven
-
-- [Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb](Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb): análisis integral con EDA, inferencia estadística, clustering y recomendaciones.
-- [Semana_2_Proyecto_5/Caso_Data_Driven.ipynb](Semana_2_Proyecto_5/Caso_Data_Driven.ipynb): versión base y de referencia del caso.
-- [Semana_2_Proyecto_5/ventas_data_driven.csv](Semana_2_Proyecto_5/ventas_data_driven.csv): dataset transaccional del mini proyecto.
-
-### Semana 5 - Proyecto 6: EDA Census Dataset
-
-- [Semana_5_Proyecto_6/EDA.ipynb](Semana_5_Proyecto_6/EDA.ipynb): EDA completo con limpieza, imputación (comparación Mediana vs KNN), visualización y exportación.
-- [Semana_5_Proyecto_6/Census.csv](Semana_5_Proyecto_6/Census.csv): dataset original Census Income (32,561 registros, 12 variables).
-- [Semana_5_Proyecto_6/Census_limpio.csv](Semana_5_Proyecto_6/Census_limpio.csv): dataset limpio exportado listo para modelado.
-
-### Semana 6 - Proyecto 7: Análisis de Correspondencia
-
-- [Semana_6_Proyecto_7/Análisis_de_correspondencia.ipynb](Semana_6_Proyecto_7/Análisis_de_correspondencia.ipynb): análisis de correspondencia (caso detergentes) con perfiles fila/columna, prueba chi-cuadrado, V de Cramer, tabla de inercia, contribuciones (CTR), mapa perceptual 2D con elipses de asociación, visualización 3D interactiva e implicaciones de negocio.
-
-### Semana 7 - Proyecto 8: Modelos de Predicción de Crédito
-
-- [Semana_7_Proyecto_8/Modelos_data_credito.ipynb](Semana_7_Proyecto_8/Modelos_data_credito.ipynb): comparación de árboles y ensambles con pipeline reproducible, preprocesamiento encapsulado, validación cruzada, ROC, matriz de confusión e importancia de variables.
-- [Semana_7_Proyecto_8/Credito.xlsx](Semana_7_Proyecto_8/Credito.xlsx): fuente de datos utilizada por el notebook.
-
-## Flujo de trabajo común
-
-1. Entrenar modelo o pipeline en notebook.
-2. Validar resultados y guardar artefactos.
-3. Consumir artefactos desde app Streamlit.
-4. Para casos data driven, ejecutar análisis inferencial y segmentación para respaldar decisiones de negocio.
-5. Documentar el flujo para facilitar reproducibilidad y mantenimiento.
-
-## Cómo ejecutar
-
-### 1. Crear entorno virtual
-
+**Opción A: Creación de entorno virtual tradicional**
 ```powershell
+# 1. Crear el entorno virtual
 python -m venv .venv
-```
 
-### 2. Activar entorno en PowerShell
-
-```powershell
+# 2. Activar en PowerShell (Windows)
 .\.venv\Scripts\Activate.ps1
-```
 
-### 3. Instalar dependencias
-
-```powershell
+# 3. Instalar dependencias
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar apps Streamlit
+**Opción B: Uso del entorno Conda base**
+```powershell
+# Activar entorno base
+conda activate base
+```
+
+### 2. Ejecución de las Aplicaciones de Streamlit
+
+Para iniciar cualquier app Streamlit desde la raíz del repositorio, usa la sintaxis general:
 
 ```powershell
+# Sintaxis general
+python -m streamlit run <RUTA/AL/ARCHIVO_APP>.py
+
+# Ejemplos
 python -m streamlit run Semana_1_Proyecto_1/app_credito_streamlit.py
 python -m streamlit run Semana_1_Proyecto_2/app_salario_streamlit.py
-python -m streamlit run Semana_1_Proyecto_3/app_salud_mental_streamlit.py
 python -m streamlit run Semana_1_Proyecto_4/app_chatbot_streamlit.py
+python -m streamlit run Semana_7_Proyecto_9/app.py
 ```
+---
 
-### 5. Entrenar y regenerar artefactos del Proyecto 4
+## 📝 Notas
 
-1. Ejecutar [Semana_1_Proyecto_4/creación_chatbot.ipynb](Semana_1_Proyecto_4/creación_chatbot.ipynb).
-2. Verificar que se actualicen [Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib](Semana_1_Proyecto_4/chatbot_tfidf_artifacts.joblib) y [Semana_1_Proyecto_4/chatbot_tfidf_metadata.json](Semana_1_Proyecto_4/chatbot_tfidf_metadata.json).
-3. Levantar [Semana_1_Proyecto_4/app_chatbot_streamlit.py](Semana_1_Proyecto_4/app_chatbot_streamlit.py).
-
-### 6. Ejecutar el mini proyecto de estrategia comercial (Proyecto 5)
-
-1. Abrir [Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb](Semana_2_Proyecto_5/estrategia_ventas_data_driven.ipynb).
-2. Ejecutar las celdas en orden para reproducir EDA, pruebas de hipótesis, segmentación y tablero gerencial.
-3. Validar decisiones finales de promociones y bono con base en los p-values reportados.
-
-### 7. Ejecutar el EDA del Proyecto 6 (Census Dataset)
-
-1. Activar el entorno base de Anaconda:
-
-   ```powershell
-   conda activate base
-   ```
-
-2. Abrir [Semana_5_Proyecto_6/EDA.ipynb](Semana_5_Proyecto_6/EDA.ipynb) con Jupyter Notebook.
-3. Ejecutar las celdas en orden para reproducir el EDA, limpieza, imputación y exportación del dataset.
-4. El dataset limpio se genera como `Census_limpio.csv` en la misma carpeta.
-
-## Troubleshooting en Windows
-
-### Error: DLL load failed (ImportError)
-
-Si ves un error como `ImportError: DLL load failed while importing algos: Una directiva de Control de aplicaciones bloqueó este archivo`, ejecuta:
-
-```powershell
-Get-ChildItem -Path ".venv" -Recurse -File | Unblock-File
-```
-
-Esto desbloquea los archivos DLL en el entorno virtual.
-
-### Error: Script execution blocked en PowerShell
-
-Si PowerShell bloquea la ejecución de `Activate.ps1`, establece la política de ejecución:
-
-```powershell
-Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy RemoteSigned
-```
-
-Luego intenta activar nuevamente:
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
-
-## Notas
-
-- Las predicciones son orientativas y no sustituyen evaluaciones formales.
-- En Proyecto 4, el comportamiento de fallback se activa cuando el score de similitud es menor al threshold configurado.
-- La app del Proyecto 4 consume artefactos serializados y metadatos generados por notebook.
-- En Proyecto 5, las conclusiones son inferenciales y deben actualizarse periódicamente con datos nuevos.
+* **Auto-reporte y Orientación**: Las evaluaciones de salud mental son herramientas informativas y educativas. No sustituyen un diagnóstico clínico profesional.
