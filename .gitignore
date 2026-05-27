@@ -37,3 +37,6 @@ Thumbs.db
 uxui_*.png
 lighthouse-*.html
 lighthouse-*.json
+
+# Archivos de Big Data muy grandes
+Semana_8_Proyecto_10/datos_transformados_seguros_2001_2024.csv

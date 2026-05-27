@@ -7,6 +7,7 @@ openpyxl
 pandas
 plotly
 prince
+pyspark
 scikit-learn
 scipy
 seaborn
